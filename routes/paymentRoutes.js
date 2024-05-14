@@ -1,8 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const { asyncWrapper } = require('../middleware/asyncWrapper');
-const { xx } = require('../controllers/paymentControllers');
+const {
+  createPaymentInvoice,
+  paymentStatus,
+  paymentDataBase,
+} = require('../controllers/paymentControllers');
 
-router.get('/', asyncWrapper(xx));
+router.post('/create-invoice', asyncWrapper(createPaymentInvoice));
+router.post('/payment-status', asyncWrapper(paymentStatus));
+router.get('/', asyncWrapper(paymentDataBase));
 
 module.exports = { paymentRouter: router };

@@ -10,19 +10,33 @@ const {
 const { addInvoice, getDataBase } = require('../services/paymentServices');
 
 const createPaymentInvoice = async (req, res) => {
-  //const {} = req.body;
-  const date_order = Date.now();
+  //console.log('req.body ', req.body);
+  const {
+    orderReference,
+    orderDate,
+    amount,
+    productName,
+    productCount,
+    productPrice,
+  } = req.body;
+  //const date_order = Date.now();
 
   const signatureObj = {
     merchantAccount: MERCHANT_ACCOUNT,
     merchantDomainName: MERCHANT_DOMAIN_NAME,
-    orderReference: '00003', //Унікальний номер invoice в системі торговця
-    orderDate: 1421412898,
-    amount: 1,
+    orderReference,
+    orderDate,
+    amount,
+    //orderReference: '00007', //Унікальний номер invoice в системі торговця
+    //orderDate: 1421412898,
+    //amount: 1,
     currency: 'UAH',
-    productName: ['Samsung WB1100F'],
-    productCount: [1],
-    productPrice: [1],
+    productName,
+    productCount,
+    productPrice,
+    //productName: ['Samsung WB1100F'],
+    //productCount: [1],
+    //productPrice: [1],
   };
 
   const signatureString = Object.values(signatureObj).flat().join(';');

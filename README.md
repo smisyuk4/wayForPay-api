@@ -6,3 +6,9 @@
 
 - [1. Створення рахунків (Create invoice)](https://wiki.wayforpay.com/view/608996852)
 - [2. Отримати відповідь](https://github.com/Svyatik4130/dvizhok/blob/9fee61d0cf1a2cb5576a22f90fcfb73bb99e9e53/routes/wayforpayRouter.js#L47)
+
+## Платіжний віджет
+
+- [Платіжний віджет](https://wiki.wayforpay.com/view/852091)
+- [Приняти платіж (Purchase)](https://wiki.wayforpay.com/view/852102)
+- [example react](https://github.com/qualitypaper/forsbrand-frontend/blob/8079a10ddf92911c05092ebf49de4199e064c600/src/pages/Payment.jsx#L66)

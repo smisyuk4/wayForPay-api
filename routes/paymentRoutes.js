@@ -8,6 +8,7 @@ const {
 } = require('../controllers/paymentControllers');
 
 router.post('/create-invoice', asyncWrapper(createPaymentInvoice));
+
 router.post('/payment-status', asyncWrapper(paymentStatus));
 router.get('/', asyncWrapper(paymentDataBase));
 
